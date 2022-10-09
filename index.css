@@ -1,0 +1,129 @@
+body{
+    display:flex;/* by default flex displays everything in a row*/
+    flex-direction:column;
+    align-items:center;
+background: black;
+}
+
+
+#board{
+    display:grid;
+    grid-template-columns:100px 100px 100px;
+    grid-template-rows:100px 100px 100px;
+    cursor:pointer; 
+    /*when mouse hovers over the board it's a pointer*/
+    position:relative; /*postion is static by default.
+    marking the board relative, anything that's absolute within it will stay within our board */
+}
+.tile{
+    color:
+   
+#6EDE52;
+   
+    font-size: 2em;
+    display:flex;
+    justify-content: center; /*puts numbers in center*/
+    align-items:center;
+}
+h1{
+    color: 
+   
+#6EDE52;
+}
+.right-border{
+    border-right:0.2em solid #A16AE8;
+
+}
+.bottom-border{
+    border-bottom:0.2em solid #A16AE8;
+}
+
+.strike{
+    position: absolute; /*absolute to entire body not to board*/
+    background-color: darkred;
+}
+
+.strike-row-1{
+    width:100%;
+    height: 4px;
+    top:15%;
+}
+.strike-row-2{
+    width:100%;
+    height: 4px;
+    top:48%;
+}
+.strike-row-3{
+    width:100%;
+    height: 4px;
+    top:83%;
+}
+.strike-column-1{
+    height:100%;
+    width: 4px;
+    left:15%;
+}
+.strike-column-2{
+    height:100%;
+    width: 4px;
+    left:48%;
+}
+.strike-column-1{
+    height:100%;
+    width: 4px;
+    left:83%;
+}
+.strike-diagonal-1{
+    width: 90%;
+    height: 4px;
+    top:50%;
+    left:5%;
+    transform: skewY(45deg);
+}
+.strike-diagonal-2{
+    width: 90%;
+    height: 4px;
+    top:50%;
+    left:5%;
+    transform: skewY(-45deg);
+}
+
+#game-over-area{
+  text-align: center;
+  border: #A16AE8 8px solid;  
+  padding:50px;
+  width:50%;
+  margin-top:50px;
+}
+
+h2{
+    color: #D6E354;
+    font-size: 2em;
+    margin-top: 0px;
+}
+
+button{
+     background-color: transparent;
+     color: #D6E354;
+     border: yellow 1px solid ;
+     padding: 10px;
+     font-size: 1.5em;
+}
+
+.hidden{
+    display:none;
+}
+.visible{
+    display: block;
+}
+
+.x-hover:hover::after{ /*x hover is the class, hover is pseudo selector so when our mouse is over it it'll be activated and after it's going to place some html inside of the element that we place x hover on*/
+    content:"X";
+    opacity: 0.4;
+
+}
+.o-hover:hover::after{ /*x hover is the class, hover is pseudo selector so when our mouse is over it it'll be activated and after it's going to place some html inside of the element that we place x hover on*/
+    content:"O";
+    opacity: 0.4;
+
+}
